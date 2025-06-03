@@ -279,7 +279,7 @@ static void WriteHeaderFile(const std::vector<ExportedFunction>& funcs, const st
 	// Init
 	ofs << L"VOID WINAPI " << FUNCATION_INIT << "()\n{\n";
 	// 系统路径
-	if (IsDlgButtonChecked(hCheckBox, IDC_CHECKBOX_SYSTEM) == BST_CHECKED)
+	if (IsDlgButtonChecked(hMain, IDC_CHECKBOX_SYSTEM) == BST_CHECKED)
 	{
 		ofs << L"    WCHAR real_dll_path[MAX_PATH];\n";
 		ofs << L"    GetSystemDirectoryW(real_dll_path, MAX_PATH);\n";
